@@ -47,11 +47,11 @@ contract DTheatre{
         uint price;
         Type _ticketType= Type.PRIME;
         price= 280;
-        if(_type==2){
+        if(_type==1){
             _ticketType=Type.CLASSIC_PLUS;
             price=180 wei;
         }
-        if(_type==3){
+        if(_type==2){
             _ticketType=Type.CLASSIC;
             price= 150 wei;
         }

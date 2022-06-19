@@ -27,13 +27,14 @@ contract('Testing DTheatre Contract ....',(accounts)=>{
         await contractDtheatre.bookTicket(1,3,3,2,{from:accounts[2],value:180,gas:'1000000'});
 
         const data = await contractDtheatre.tickets(accounts[2]);
-        assert.equal(data.seatNumber.toNumber(),9);
-        // uint _id, uint _row , uint _col,uint _type
+        assert.equal(data.seatNumber.toNumber(),9);  
 
     })
     it("Should give contract balance ",async ()=>{
         let tx = await contractDtheatre.getBal();
         assert.equal(tx.toNumber(),1180);
-    })
+    });
+
+
 
 })
